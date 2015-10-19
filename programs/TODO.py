@@ -1,16 +1,23 @@
-TASk                                                          Status
-Uninformed search:
-    BFS                                                        Done
+import TASk                                                    Status
+
+def Uninformed search:
+    BFS                                                       'Done'
     Uniformed cost search(Dijkstra's)                          Done
-    Depth first search
-    Depth limited search
-    Iterative deepening depth first search
+    Depth first search                                        'Done'
+    Depth limited search                                      Not Req
+    Iterative deepening depth first search                    Not Req
 
 
-Informed search(Heuristics):
-    Greedy best first search
-    A* search
-    //Memory bounded heuristics search
+def Informed search(Heuristics):
+    @Greedy_best_first_search
+    @A*_search
 
-Local search algorithms:
-    Hill climbing search
+def Local search algorithms:
+    @Hill_climbing_search                                      'Doing'
+
+def ADVERSARIAL SEARCH():
+    @Min-Max
+    @Alpha-Beta-purning
+
+def KNOWLEDGE-BASED AGENTS():
+    @Wumpus_world

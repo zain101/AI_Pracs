@@ -9,11 +9,11 @@ def Uninformed search:
 
 
 def Informed search(Heuristics):
-    @Greedy_best_first_search
-    @A*_search
+    @Greedy_best_first_search                                  'Done'
+    @A*_search                                                 Later
 
 def Local search algorithms:
-    @Hill_climbing_search                                      'Doing'
+    @Hill_climbing_search                                      'Done'
 
 def ADVERSARIAL SEARCH():
     @Min-Max

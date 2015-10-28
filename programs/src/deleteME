@@ -1,0 +1,50 @@
+if t.data is None:
+    # print t.operation
+    if t.operation == "max":
+        if val is not None:
+            t.beta = val
+            val = None
+        if t.left.data > t.alpha:
+            t.value = t.left.data
+            t.alpha = t.value
+            print "visited max", t.left.data
+        if t.value < t.beta:
+            print "visited max", t.right.data
+            if t.right.data > t.alpha:
+                val = t.value = t.data = t.alpha = t.right.data
+        else:
+            t.data = t.left.data
+            val = t.beta
+            print "PRUNE max ............", t.right.data
+    elif t.operation == "min":
+        if val is not None:
+            t.beta = val
+            val = None
+        if t.left.data < t.beta:
+            t.value = t.left.data
+            t.beta = t.value
+            print "visited min", t.left.data
+        if t.value > t.alpha:
+            print "visited min", t.right.data
+            if t.right.data < t.beta:
+                val = t.value = t.data = t.beta = t.right.data
+            else:
+                val = t.beta
+        else:
+            t.data = t.right.data
+            val = t.alpha
+            print "PRUNE min............", t.right.data
+
+            '''
+            g.append(t.left.data)
+            g.append(t.right.data)
+            if t.center:
+                g.append(t.center.data)
+            if None in g:
+                g.remove(None)
+            if t.operation == "max":
+                t.data = max(g)
+            else:
+                t.data = min(g)
+            g = []
+            '''

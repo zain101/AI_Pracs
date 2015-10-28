@@ -1,17 +1,18 @@
 def get_heuristics_for_8_queen(board):
     h = 0
-    #Check for every row
+    # Check for every row
     for i in range(len(board)):
-        #Check for every column
-        for j in range(i + 1,len(board)):
-            #print i,j
-            #Queens are in the same row
+        # Check for every column
+        for j in range(i + 1, len(board)):
+            # print i,j
+            # Queens are in the same row
             if board[i] == board[j]:
                 h += 1
-                #print "got in row"
-            #Get the difference between the current column and the check column
+                # print "got in row"
+            # Get the difference between the current column and the check
+            # column
             offset = j - i
-            #print "offset", offset
+            # print "offset", offset
             '''
             To be a diagonal, the check column value has to be equal
             to the current column value +/- the offset
@@ -25,8 +26,6 @@ def get_heuristics_for_8_queen(board):
             if board[i] == board[j] - offset or board[i] == board[j] + offset:
                 h += 1
     return h
-
-
 
 
 if __name__ == "__main__":
